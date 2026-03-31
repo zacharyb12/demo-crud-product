@@ -51,14 +51,12 @@ export class AuthService {
     if(index !== -1)
     {
       this.isLogged.set(true);
+
       localStorage.setItem("isLogged","true")
-      // localstorage : zone de memoire du navigateur
-      // localStorage.setItem("role" , "admin")
-      // localStorage.getItem("role")
-      // localStorage.removeItem("role")
-      // localStorage.clear()
+
 
       const role = this.listUser[index].role;
+      
       if(role == "admin")
       {
         this.isAdmin.set(true)
