@@ -1,0 +1,14 @@
+<a class="link" routerLink="">Home</a>
+
+@if(isLoggedNav())
+{
+    <a class="link" routerLink="product-list">Product List</a>
+}
+
+@if(isAdminNav())
+{
+    <a class="link" routerLink="product-add">Product Add</a>
+}
+
+
+<app-login-component></app-login-component>

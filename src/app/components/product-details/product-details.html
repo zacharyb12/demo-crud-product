@@ -1,0 +1,18 @@
+<h1 class="text-center">Product Details</h1>
+
+@if(product)
+{
+
+    <div>
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <p>{{product.price}}€</p>
+        <img [src]="product.imageUrl" [alt]="product.name" width="300"/>
+        <button>Acheter</button>
+        @if(isAdmin())
+        {
+            <button (click)="navigateToUpdate(product.name)">Update</button>
+        }
+        
+    </div>
+}

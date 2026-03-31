@@ -1,0 +1,39 @@
+<h1>Update product</h1>
+
+@if(product != undefined)
+{
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+        <div>
+            <label>Name</label>
+            <br>
+            <input type="text" formControlName="name"/>
+        </div>
+
+        <div>
+            <label>Description</label>
+            <br>
+            <input type="text" formControlName="description"/>
+        </div>
+
+        <div>
+            <label>Price</label>
+            <br>
+            <input type="number" formControlName="price"/>
+        </div>
+
+        <div>
+            <label>Image</label>
+            <br>
+            <input type="text" formControlName="image"/>
+        </div>
+
+        <button type="submit">Update</button>
+        
+        <button type="button" (click)="removeProduct()" >Delete</button>
+
+    </form>
+}
+@else{
+    <p>Ce produit est indisponible !</p>
+}

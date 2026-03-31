@@ -1,0 +1,29 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label>Nom</label>
+        <br>
+        <input type="text" formControlName="name" />
+    </div>
+    
+    <div>
+        <label>Description</label>
+        <br>
+        <input type="text" formControlName="description" />
+    </div>
+    
+    <div>
+        <label>Price</label>
+        <br>
+        <input type="number" formControlName="price" />
+    </div>
+    
+    <div>
+        <label>Image</label>
+        <br>
+        <input type="text" formControlName="image" />
+    </div>
+
+    <button type="submit">Submit</button>
+
+</form>

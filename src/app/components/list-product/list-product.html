@@ -1,0 +1,16 @@
+<h1 class="text-center">Product list</h1>
+
+@if(isAdmin())
+{
+    <a routerLink="/product-add">Add Product</a>
+}
+
+@for(p of listProduct; track $index)
+{
+    <div>
+        <h3>{{p.name}}</h3>
+        <p>{{p.price}}</p>
+        <button (click)="navigateToDetails(p.name)">Details</button>
+    </div>
+    
+}
