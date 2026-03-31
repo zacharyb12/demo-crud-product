@@ -1,0 +1,8 @@
+.loginStyle{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: white;
+    padding: 1rem;
+}

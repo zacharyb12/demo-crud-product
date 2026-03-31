@@ -1,7 +1,10 @@
-<a class="link" routerLink="">Home</a>
+<nav>
 
-@if(isLoggedNav())
-{
+
+        <a class="link" routerLink="">Home</a>
+        
+        @if(isLoggedNav())
+        {
     <a class="link" routerLink="product-list">Product List</a>
 }
 
@@ -12,3 +15,4 @@
 
 
 <app-login-component></app-login-component>
+</nav>

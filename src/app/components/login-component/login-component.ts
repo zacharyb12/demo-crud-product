@@ -13,6 +13,13 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 })
 export class LoginComponent implements OnInit{
 
+  isOpen = signal(false)
+
+  toggleIsOpen()
+  {
+    this.isOpen.set(!this.isOpen())
+  }
+
 
   isLogged = signal(false)
   formGroup : FormGroup
@@ -33,6 +40,7 @@ export class LoginComponent implements OnInit{
   login(){
     if(this.formGroup.valid)
     {
+      this.isOpen.set(false)
       const email = this.formGroup.value["email"];
       const password = this.formGroup.value["password"];
       this.authService.login(email,password);
